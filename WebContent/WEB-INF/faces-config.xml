@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+    <managed-bean>
+        <managed-bean-name>helloWorldBean</managed-bean-name>
+        <managed-bean-class>
+            com.myhomepageindia.jsftutorial.web.bean.HelloWorldBean
+        </managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <display-name>HelloWorld</display-name>
+        <from-view-id>/HelloWorld.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/HelloWorldResult.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+	 <application>
+	     <message-bundle>Messages_fr</message-bundle>
+	</application>   
+    
+</faces-config>
+
